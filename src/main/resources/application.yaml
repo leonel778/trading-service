@@ -21,3 +21,7 @@ spring:
       bindings:
         bootcoinTrading-in-0:
           destination: iixp9xko-bootcoin-trading
+        trading-updateBootcoin-out-0:
+          destination: iixp9xko-trading-updBootcoin
+        trading-payWallet-out-0:
+          destination: iixp9xko-payWallet
