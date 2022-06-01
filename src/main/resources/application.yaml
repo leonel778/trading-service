@@ -1,0 +1,23 @@
+server:
+  port: 8075
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://leonel:leonel@cluster0.we5wo.mongodb.net/yanki
+  kafka:
+    bootstrap-servers: moped-01.srvs.cloudkafka.com:9094,moped-02.srvs.cloudkafka.com:9094,moped-03.srvs.cloudkafka.com:9094
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: SCRAM-SHA-256
+        jaas:
+          config: org.apache.kafka.common.security.scram.ScramLoginModule required username="iixp9xko" password="nzbgXuSlZFayysZa29pyk01wgtEReHFa";
+  cloud:
+    function:
+      definition: bootcoinTrading
+    stream:
+      bindings:
+        bootcoinTrading-in-0:
+          destination: iixp9xko-bootcoin-trading
